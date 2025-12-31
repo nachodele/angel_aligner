@@ -1,7 +1,7 @@
 # gui/navbar.py
 import customtkinter as ctk
 from core.config import Config
-from core.theme import MEDICAL_COLORS, BUTTON_SIZES
+from core.theme import MEDICAL_COLORS
 
 class Navbar(ctk.CTkFrame):
     def __init__(self, parent, app):

@@ -21,10 +21,6 @@ def apply_medical_theme():
         "text_primary": "#1e293b", # Texto principal
         "text_secondary": "#64748b" # Texto secundario
     }
-    
-    # Estilos globales (CustomTkinter no tiene set_global_styles, aplicamos en widgets)
-    print("✅ Tema médico profesional aplicado")
-    print("🎨 Colores:", {k: v for k, v in MEDICAL_COLORS.items()})
 
 # Constantes de colores para usar en toda la app
 MEDICAL_COLORS = {
@@ -84,10 +80,5 @@ def get_medical_style(component):
     }
     return styles.get(component, {})
 
-BUTTON_SIZES = {
-    "navbar": {"height": 38, "font_size": 13},
-    "card": {"height": 28, "font_size": 10},
-    "dialog": {"height": 35, "font_size": 12}
-}
 if __name__ == "__main__":
     apply_medical_theme()

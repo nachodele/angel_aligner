@@ -12,7 +12,7 @@ from core.theme import apply_medical_theme, MEDICAL_COLORS
 apply_medical_theme()
 
 from gui.navbar import Navbar
-from gui.home import HomeView
+from gui.dashboard import HomeView
 from gui.patients import PatientsView
 
 class AngelAligner(ctk.CTk):
@@ -52,9 +52,8 @@ class AngelAligner(ctk.CTk):
     
     def show_appointments(self):
         self.clear_content()
-        label = ctk.CTkLabel(self.content_frame, text="📅 Appointments\nComing soon in beta!", 
-                           font=ctk.CTkFont(size=30, weight="bold"))
-        label.pack(expand=True)
+        from gui.appointments import AppointmentsView
+        self.current_view = AppointmentsView(self.content_frame, self.db)
     
     def clear_content(self):
         for widget in self.content_frame.winfo_children():
